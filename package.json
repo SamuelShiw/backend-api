@@ -20,5 +20,8 @@
   },
   "devDependencies": {
     "nodemon": "^3.1.10"
-  }
+  },
+  "scripts": {
+  "docker": "docker run -p 3000:3000 --env-file .env backend-api"
+}
 }
