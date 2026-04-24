@@ -13,7 +13,7 @@ exports.register = (req, res) => {
     return res.status(400).json({ message: "password mínimo 6 caracteres" });
   }
 
-  const allowedRoles = ["admin", "reader"];
+  const allowedRoles = ["admin", "reader", "editor"];
   const userRole = role && allowedRoles.includes(role) ? role : "reader";
 
   const hashedPassword = bcrypt.hashSync(password, 8);
